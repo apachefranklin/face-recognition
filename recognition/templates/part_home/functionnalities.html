@@ -1,0 +1,80 @@
+{% load static %}
+
+<section class="bg-white border-b py-8">
+    <div class="container max-w-5xl mx-auto m-8">
+      <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Functionnality
+      </h1>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="w-5/6 sm:w-1/2 p-6">
+          <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            Get class of single image
+          </h3>
+          <p class="text-gray-600 mb-8">
+           You have a single image, you can test the accuracy or precision of our model by 
+           sent it to our demo interface and get his class.
+           <br /><br /><br /><br /><br />
+
+            <a href="{% url 'demo' %}" class="mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" style="background-color: #ff6347;">
+              Launch now
+            </a>
+          </p>
+        </div>
+        <div class="w-full sm:w-1/2 p-6">
+          <img src="{% static 'person.svg' %}" />
+        </div>
+      </div>
+      <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+         <img src="{% static 'undraw_Image__folder_re_hgp7 (1).svg' %}" style="height: 300px !important;" />
+        </div>
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+          <div class="align-middle">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Reorganize  images folder in category
+            </h3>
+            <p class="text-gray-600 mb-8">
+              You have images folders who are not organized, use our application to reorganize them in differents categories
+              <br /><br /><br /><br /><br />
+              
+              
+              <a href="{% url 'uploadzip' %}" class="mx-auto lg:mx-0 hover:underline font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out text-white" style="background-color: #3f3d56;">
+                Getting started
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!---->
+      <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+          <div class="align-middle">
+            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              Visualize result
+            </h3>
+            <p class="text-gray-600 mb-8">
+              Download our special image viewver to, visualize differents images in their categories,
+              extends your possibilty and correct categorization with graphical interface offer by our 
+              special viewver
+              <br />
+              <br />
+              <br />
+              <br /><br />
+              <br />
+              <a href="#" class="mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out bg-blue-500">
+                Download it now
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="w-full sm:w-1/2 p-6 mt-6">
+          <img src="{% static 'image_viewver.svg' %}" style="height: 300px !important;" />
+         </div>
+      </div>
+      <!-- -->
+    </div>
+  </section>

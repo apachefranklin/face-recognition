@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<form id="zip-form-upload" action="{% url 'performzip' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <section class="bg-white border-b py-16 p-10 ">
+        <div class="container max-w-7xl mx-auto m-8 mt-12 shadow-xl p-10">
+          <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
+            Upload zip folder and get it reorganizate
+          </h1>
+          <div class="w-full mb-12">
+            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+          </div>
+          <div class="text-center">
+                <br /><br /><br />
+                <label class="text-2xl font-bold text-gray-800">Upload your zip folder their:</label>
+                <br />
+                <input type="file" name="zip_to_organize" accept=".zip" required="required">
+                <br /><br />
+                <button class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 p-10 rounded-full">
+                   GET ORGANIZED FOLDER
+                </button>
+                <br /><br />
+                <a href="#" id="link-download-zip" class="bg-green-400 text-gray-800 font-bold py-2 p-10 rounded-full shadow">
+                    Download zip
+                </a>
+          </div>
+          
+          
+          
+        </div>
+        
+    </section>
+</form>
+
+<script type="text/javascript">
+    var header = document.getElementById("header");
+    var navcontent = document.getElementById("nav-content");
+    var navaction = document.getElementById("navAction");
+    var brandname = document.getElementById("brandname");
+    var toToggle = document.querySelectorAll(".toggleColour");
+    
+    navaction.classList.add("gradient");
+    header.classList.add("shadow");
+    header.classList.add("bg-white");
+    for (var i = 0; i < toToggle.length; i++) {
+      toToggle[i].classList.add("text-gray-800");
+      toToggle[i].classList.remove("text-white");
+    }
+</script>
+{% endblock content %}
